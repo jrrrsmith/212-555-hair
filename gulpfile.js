@@ -11,6 +11,9 @@ var sassOptions = {
   outputStyle: 'compressed'
 };
 
+gulp.task('build', ['sass', 'js'], function () {
+});
+
 gulp.task('sass', function() {
 	gulp.src('styles/style.scss')
 	.pipe(sass(sassOptions).on('error', sass.logError))
